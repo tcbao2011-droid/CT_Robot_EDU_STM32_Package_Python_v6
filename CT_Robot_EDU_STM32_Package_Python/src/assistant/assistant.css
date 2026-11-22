@@ -1,0 +1,33 @@
+.workspace-panel { position: relative; }
+.ai-bar { flex: none; padding: 6px 10px; border-bottom: 1px solid #e2e8f0; background: #f8fafc; position: relative; z-index: 100; } /* dưới hộp chọn phần cứng (1000), trên Blockly */
+.ai-row { display: flex; gap: 8px; align-items: center; }
+.ai-search { position: relative; flex: 1; min-width: 0; }
+.ai-search input { width: 100%; box-sizing: border-box; padding: 7px 10px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 14px; }
+.ai-row > button, .ai-actions button { border: 1px solid #cbd5e1; background: #fff; border-radius: 8px; padding: 6px 10px; cursor: pointer; font-size: 13px; white-space: nowrap; }
+.ai-row > button.on { background: #e0f2fe; border-color: #38bdf8; }
+.ai-row > button:hover, .ai-actions button:hover { background: #f1f5f9; }
+.ai-badge { margin-left: 4px; padding: 1px 6px; border-radius: 10px; font-size: 11px; color: #fff; }
+.ai-badge.err { background: #dc2626; } .ai-badge.warn { background: #d97706; }
+.ai-results { position: absolute; left: 0; right: 0; top: calc(100% + 4px); margin: 0; padding: 4px; list-style: none; background: #fff; border: 1px solid #cbd5e1; border-radius: 10px; box-shadow: 0 8px 24px rgba(15,23,42,.18); max-height: 340px; overflow: auto; }
+.ai-results li { padding: 7px 9px; border-radius: 7px; cursor: pointer; display: grid; gap: 2px; }
+.ai-results li.active { background: #e0f2fe; }
+.ai-results li em { font-style: normal; font-size: 11px; color: #64748b; }
+.ai-results li span { font-size: 12px; color: #475569; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.ai-results .ai-empty { color: #64748b; cursor: default; font-size: 13px; }
+.ai-pop { position: absolute; left: 10px; right: 10px; top: calc(100% + 4px); max-height: 55vh; overflow: auto; background: #fff; border: 1px solid #cbd5e1; border-radius: 10px; box-shadow: 0 8px 24px rgba(15,23,42,.2); padding: 10px 12px; font-size: 14px; }
+.ai-pop-head { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
+.ai-pop-head label { font-size: 12px; color: #475569; margin-left: auto; }
+.ai-x { margin-left: auto; border: 0; background: none; cursor: pointer; font-size: 16px; color: #64748b; }
+.ai-pop-head label + .ai-x { margin-left: 0; }
+.ai-summary { margin: 4px 0 8px; } .ai-tip { margin: 0 0 8px; color: #92400e; background: #fffbeb; padding: 6px 8px; border-radius: 6px; }
+.ai-lines { margin: 0; padding: 0; list-style: none; } .ai-lines li { padding: 2px 0; } .ai-lines li.spacer { height: 8px; } .ai-lines li.muted a { color: #94a3b8; font-style: italic; }
+.ai-lines a { cursor: pointer; } .ai-lines a:hover { color: #0369a1; }
+.ai-hint { margin: 8px 0 0; font-size: 12px; color: #64748b; }
+.ai-problems { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.ai-problems li { display: flex; gap: 8px; padding: 8px; border-radius: 8px; background: #f8fafc; border-left: 4px solid #94a3b8; }
+.ai-problems li.error { border-left-color: #dc2626; } .ai-problems li.warn { border-left-color: #d97706; } .ai-problems li.info { border-left-color: #0284c7; }
+.ai-problems small { color: #475569; display: block; margin-top: 2px; }
+.ai-actions { margin-top: 6px; display: flex; gap: 6px; } .ai-actions button.fix { background: #dcfce7; border-color: #4ade80; }
+
+/* Blockly (toolbox z-index 70) phải nằm dưới kết quả tìm kiếm / bảng giải thích. */
+.workspace-panel .blockly-host { position: relative; z-index: 0; isolation: isolate; }

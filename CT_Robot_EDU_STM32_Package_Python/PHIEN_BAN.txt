@@ -1,0 +1,23 @@
+CT Robot EDU - STM32 Edition
+Release package: 2026-11-16
+Source tests: 76 passed, 0 failed (gồm 11 test xuất Python)
+Distribution type: Local Node.js/Vite package (not standalone EXE)
+
+--- Cập nhật: khối NẾU duy nhất + ô nhập kiểu Scratch ---
+- Chỉ còn một khối NẾU ... THÌ (bấm ⚙ để thêm "nếu không thì nếu" / "nếu không thì"). Khối controls_ifelse đã gỡ.
+- Mọi ô giá trị nhận mọi loại biểu thức kéo vào và có số mặc định để gõ trực tiếp.
+- File dự án cũ tự chuyển đổi khi mở (src/legacyMigration.js).
+- Test mới: tests/blocksHeadless.test.js (chạy Blockly thật không giao diện).
+
+--- Cập nhật: bỏ L298N khỏi phần mềm ---
+- Tên/mã mạch không còn chữ L298N (mã cũ vẫn nhận ra: LEGACY_PROFILE_IDS trong hardwareProfiles.js).
+- STM32: bỏ khối di chuyển. Chỉ CT Expansion Board (hasMotors: true) có khối di chuyển và cấu hình chân động cơ.
+- Mạch khác: không kiểm tra ENA/ENB, ẩn bảng chân động cơ, sketch C++ (CT_NO_MOTORS) và MicroPython không khởi tạo động cơ
+  trừ khi chương trình (file cũ) gọi lệnh di chuyển.
+
+--- Cập nhật: khối Logic / Điều khiển / Toán / Chữ / Biến / Danh sách ---
+- src/programBlocks.js: định nghĩa khối + sinh mã C++ (dịch tiếp sang MicroPython).
+- src/programRuntime.js: hàm ct_* (bản C++ chèn vào sketch, bản Python) — chỉ chèn khi chương trình dùng tới.
+- src/simulatorPrograms.js: mô phỏng các khối trên.
+- Biến: kiểu suy ra từ giá trị gán (số / chữ / đúng-sai), khai báo toàn cục. Danh sách: số thực, tối đa 32 phần tử (CT_LIST_MAX).
+- Test: tests/programBlocks.test.js (có biên dịch thử C++ bằng g++ giả lập Arduino và chạy thử Python).

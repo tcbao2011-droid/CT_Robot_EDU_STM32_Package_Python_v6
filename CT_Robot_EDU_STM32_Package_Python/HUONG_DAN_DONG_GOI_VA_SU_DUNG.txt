@@ -1,0 +1,42 @@
+CT ROBOT EDU - GOI PHAN PHOI STM32
+==================================
+
+1. YEU CAU MAY TINH
+- Windows 10/11 64-bit.
+- Node.js 22.12 tro len (khuyen nghi Node.js 22 LTS), hoac 20.19 tro len.
+- Ket noi Internet trong lan dau de npm tai cac thu vien React, Blockly va Vite.
+- De bien dich/nap firmware: can cai Arduino CLI va core tuong ung voi board.
+
+2. KHOI DONG TREN WINDOWS
+- Giai nen toan bo thu muc.
+- Chay CHAY_CT_ROBOT_EDU.bat.
+- Lan dau, file se tu chay npm ci de cai thu vien.
+- Trinh duyet se mo CT Robot EDU tai http://127.0.0.1:5173.
+- De tat ung dung, nhan Ctrl+C trong cua so lenh.
+
+3. KHOI DONG TREN LINUX/macOS
+- Cai Node.js 20.19+ hoac 22.12+ va npm.
+- Mo Terminal tai thu muc du an.
+- Chay: ./CHAY_CT_ROBOT_EDU.sh
+
+4. BIEN DICH VA NAP STM32
+Ung dung goi lenh arduino-cli tren may dang chay. De bien dich/nap STM32,
+may can co Arduino CLI, core STMicroelectronics:stm32 va cac cong cu nap
+phu hop voi phuong thuc nap cua board (vi du ST-LINK/DFU).
+Ung dung khong tu dong cai core STM32 hoac STM32CubeProgrammer.
+
+5. CAC GIOI HAN CUA GOI NAY
+- Day la goi ma nguon co launcher, chay cuc bo bang Node.js; khong phai file
+  cai dat .EXE doc lap.
+- Cac goi npm duoc tai ve o lan chay dau tien; can Internet.
+- Bien dich va nap firmware can Arduino CLI/core/cac cong cu board tuong ung.
+- Chuc nang compile/upload dang duoc gan vao Vite development server; vi vay
+  hay khoi dong bang file CHAY_CT_ROBOT_EDU.bat, khong mo rieng index.html.
+- Lenh kiem thu ma nguon: npm test
+
+6. CAC TEP QUAN TRONG
+- CHAY_CT_ROBOT_EDU.bat: khoi dong tren Windows.
+- CHAY_CT_ROBOT_EDU.sh: khoi dong tren Linux/macOS.
+- README.md: tai lieu du an.
+- HUONG_DAN_MACH_STM32.md: ghi chu cac board STM32.
+- STM32_FIX_REPORT.md: bao cao cac thay doi STM32.

@@ -1,0 +1,400 @@
+TAP version 13
+# Subtest: fold bỏ dấu tiếng Việt
+ok 1 - fold bỏ dấu tiếng Việt
+  ---
+  duration_ms: 1.020841
+  type: 'test'
+  ...
+# Subtest: tìm không dấu, đồng nghĩa và gõ sai 1 ký tự
+ok 2 - tìm không dấu, đồng nghĩa và gõ sai 1 ký tự
+  ---
+  duration_ms: 1.50072
+  type: 'test'
+  ...
+# Subtest: lint: chưa có khối sự kiện
+ok 3 - lint: chưa có khối sự kiện
+  ---
+  duration_ms: 0.805258
+  type: 'test'
+  ...
+# Subtest: lint: nhóm khối rời và LẶP MÃI chặn khối phía sau
+ok 4 - lint: nhóm khối rời và LẶP MÃI chặn khối phía sau
+  ---
+  duration_ms: 0.298828
+  type: 'test'
+  ...
+# Subtest: lint: giá trị ngoài khoảng có sửa nhanh
+ok 5 - lint: giá trị ngoài khoảng có sửa nhanh
+  ---
+  duration_ms: 0.671457
+  type: 'test'
+  ...
+# Subtest: lint: servo, chia cho 0, NẾU thiếu điều kiện
+ok 6 - lint: servo, chia cho 0, NẾU thiếu điều kiện
+  ---
+  duration_ms: 0.242825
+  type: 'test'
+  ...
+# Subtest: lint: sự kiện không khớp
+ok 7 - lint: sự kiện không khớp
+  ---
+  duration_ms: 0.255072
+  type: 'test'
+  ...
+# Subtest: lint: khớp tên sự kiện không phân biệt hoa thường
+ok 8 - lint: khớp tên sự kiện không phân biệt hoa thường
+  ---
+  duration_ms: 0.177867
+  type: 'test'
+  ...
+# Subtest: lint: khối không dùng được với phần cứng và chân ESP32 chỉ đọc
+ok 9 - lint: khối không dùng được với phần cứng và chân ESP32 chỉ đọc
+  ---
+  duration_ms: 0.482864
+  type: 'test'
+  ...
+# Subtest: lint: chương trình đúng không có cảnh báo
+ok 10 - lint: chương trình đúng không có cảnh báo
+  ---
+  duration_ms: 0.411817
+  type: 'test'
+  ...
+# Subtest: giải thích: mô tả khối và đoạn lồng nhau bằng tiếng Việt
+ok 11 - giải thích: mô tả khối và đoạn lồng nhau bằng tiếng Việt
+  ---
+  duration_ms: 1.023094
+  type: 'test'
+  ...
+# Subtest: giải thích: khối chưa biết vẫn có mô tả dự phòng
+ok 12 - giải thích: khối chưa biết vẫn có mô tả dự phòng
+  ---
+  duration_ms: 0.094081
+  type: 'test'
+  ...
+# Subtest: giải thích: ô còn trống được nói rõ
+ok 13 - giải thích: ô còn trống được nói rõ
+  ---
+  duration_ms: 0.133751
+  type: 'test'
+  ...
+# Subtest: AI pin lint only warns special pins on ordinary boards
+ok 14 - AI pin lint only warns special pins on ordinary boards
+  ---
+  duration_ms: 8.90069
+  type: 'test'
+  ...
+# Subtest: AI keeps CT Expansion fixed PCB GPIO reservations
+ok 15 - AI keeps CT Expansion fixed PCB GPIO reservations
+  ---
+  duration_ms: 4.473329
+  type: 'test'
+  ...
+# Subtest: AI nhận diện chân STM32 dạng PAx/PBx, chân đã dùng và giới hạn mode
+ok 16 - AI nhận diện chân STM32 dạng PAx/PBx, chân đã dùng và giới hạn mode
+  ---
+  duration_ms: 8.932617
+  type: 'test'
+  ...
+# Subtest: AI giới hạn tốc độ block di chuyển STM32 trong khoảng 0–100%
+ok 17 - AI giới hạn tốc độ block di chuyển STM32 trong khoảng 0–100%
+  ---
+  duration_ms: 0.207291
+  type: 'test'
+  ...
+# Subtest: instrument generator marks statement and value outputs without changing generator results
+ok 18 - instrument generator marks statement and value outputs without changing generator results
+  ---
+  duration_ms: 1.144066
+  type: 'test'
+  ...
+# Subtest: instrumentation is idempotent and wraps generators registered later
+ok 19 - instrumentation is idempotent and wraps generators registered later
+  ---
+  duration_ms: 0.250415
+  type: 'test'
+  ...
+# Subtest: strip markers preserves sketch bytes and calculates nested source ranges
+ok 20 - strip markers preserves sketch bytes and calculates nested source ranges
+  ---
+  duration_ms: 0.961061
+  type: 'test'
+  ...
+# Subtest: line mapping highlights every line touched by a block range
+ok 21 - line mapping highlights every line touched by a block range
+  ---
+  duration_ms: 0.207471
+  type: 'test'
+  ...
+# Subtest: empty generated blocks do not create phantom highlighted ranges
+ok 22 - empty generated blocks do not create phantom highlighted ranges
+  ---
+  duration_ms: 0.163465
+  type: 'test'
+  ...
+# Subtest: line mapping does not spill into the following line at an exclusive range end
+ok 23 - line mapping does not spill into the following line at an exclusive range end
+  ---
+  duration_ms: 0.15344
+  type: 'test'
+  ...
+# Subtest: source markers survive Arduino sketch assembly and are removed before output
+ok 24 - source markers survive Arduino sketch assembly and are removed before output
+  ---
+  duration_ms: 6.758276
+  type: 'test'
+  ...
+# Subtest: source markers do not add blank lines or change the generated Arduino sketch
+ok 25 - source markers do not add blank lines or change the generated Arduino sketch
+  ---
+  duration_ms: 0.33384
+  type: 'test'
+  ...
+# Subtest: compile protocol reads JSON messages split across chunks and final line without newline
+ok 26 - compile protocol reads JSON messages split across chunks and final line without newline
+  ---
+  duration_ms: 20.475429
+  type: 'test'
+  ...
+# Subtest: compile protocol preserves detailed HTTP error body
+ok 27 - compile protocol preserves detailed HTTP error body
+  ---
+  duration_ms: 1.484466
+  type: 'test'
+  ...
+# Subtest: compile protocol reports malformed NDJSON and missing completion
+ok 28 - compile protocol reports malformed NDJSON and missing completion
+  ---
+  duration_ms: 0.627961
+  type: 'test'
+  ...
+# Subtest: compileSketch validates that code and FQBN are provided
+ok 29 - compileSketch validates that code and FQBN are provided
+  ---
+  duration_ms: 0.214381
+  type: 'test'
+  ...
+# Subtest: standard profiles do not mark their configured motor/sensor pins as occupied
+ok 30 - standard profiles do not mark their configured motor/sensor pins as occupied
+  ---
+  duration_ms: 0.426139
+  type: 'test'
+  ...
+# Subtest: AVR assistant checks only real special pins, not default L298N assignments
+ok 31 - AVR assistant checks only real special pins, not default L298N assignments
+  ---
+  duration_ms: 0.167672
+  type: 'test'
+  ...
+# Subtest: ESP32-S3 uses its own pin constraints rather than classic ESP32 input-only range
+ok 32 - ESP32-S3 uses its own pin constraints rather than classic ESP32 input-only range
+  ---
+  duration_ms: 0.202513
+  type: 'test'
+  ...
+# Subtest: CT Expansion retains all fixed extension pin reservations
+ok 33 - CT Expansion retains all fixed extension pin reservations
+  ---
+  duration_ms: 0.611407
+  type: 'test'
+  ...
+# Subtest: resetHardwareConfig restores selected board defaults and leaves extension defaults intact
+ok 34 - resetHardwareConfig restores selected board defaults and leaves extension defaults intact
+  ---
+  duration_ms: 0.571147
+  type: 'test'
+  ...
+# Subtest: ordinary boards do not treat their sample wiring roles as reserved GPIO
+ok 35 - ordinary boards do not treat their sample wiring roles as reserved GPIO
+  ---
+  duration_ms: 0.800881
+  type: 'test'
+  ...
+# Subtest: firmware header uses each ESP32 profile Bluetooth pins, not one global pair
+ok 36 - firmware header uses each ESP32 profile Bluetooth pins, not one global pair
+  ---
+  duration_ms: 0.834752
+  type: 'test'
+  ...
+# Subtest: ESP32 buzzer command switches tone off after its configured pulse
+ok 37 - ESP32 buzzer command switches tone off after its configured pulse
+  ---
+  duration_ms: 0.16682
+  type: 'test'
+  ...
+# Subtest: CT Expansion remains on its fixed extension firmware path and disables Bluetooth UART
+ok 38 - CT Expansion remains on its fixed extension firmware path and disables Bluetooth UART
+  ---
+  duration_ms: 0.361522
+  type: 'test'
+  ...
+# Subtest: every built-in profile and CT Expansion FQBN is accepted by the local compiler
+ok 39 - every built-in profile and CT Expansion FQBN is accepted by the local compiler
+  ---
+  duration_ms: 0.124036
+  type: 'test'
+  ...
+# Subtest: reset button values match the profile defaults for every available board
+ok 40 - reset button values match the profile defaults for every available board
+  ---
+  duration_ms: 0.372669
+  type: 'test'
+  ...
+# Subtest: if generator includes every else-if branch and final else
+ok 41 - if generator includes every else-if branch and final else
+  ---
+  duration_ms: 0.915493
+  type: 'test'
+  ...
+# Subtest: if generator emits a single if when no else branch exists
+ok 42 - if generator emits a single if when no else branch exists
+  ---
+  duration_ms: 0.15306
+  type: 'test'
+  ...
+# Subtest: if generator keeps an empty condition safe and defaults to false
+ok 43 - if generator keeps an empty condition safe and defaults to false
+  ---
+  duration_ms: 0.126289
+  type: 'test'
+  ...
+# Subtest: 11 khối di chuyển được khai báo, tên và ô nhập khớp khối core
+ok 44 - 11 khối di chuyển được khai báo, tên và ô nhập khớp khối core
+  ---
+  duration_ms: 0.864918
+  type: 'test'
+  ...
+# Subtest: sinh mã đúng lệnh Robot API với giá trị mặc định và giá trị người dùng
+ok 45 - sinh mã đúng lệnh Robot API với giá trị mặc định và giá trị người dùng
+  ---
+  duration_ms: 0.241703
+  type: 'test'
+  ...
+# Subtest: toolbox của CT Expansion có nhóm 🚗 Di chuyển, đủ khối, có giá trị mặc định điền sẵn
+ok 46 - toolbox của CT Expansion có nhóm 🚗 Di chuyển, đủ khối, có giá trị mặc định điền sẵn
+  ---
+  duration_ms: 0.863795
+  type: 'test'
+  ...
+# Subtest: sketch CT Expansion dùng khối di chuyển: có Robot API, không kéo thêm mã động cơ 6 kênh
+ok 47 - sketch CT Expansion dùng khối di chuyển: có Robot API, không kéo thêm mã động cơ 6 kênh
+  ---
+  duration_ms: 1.406239
+  type: 'test'
+  ...
+# Subtest: trợ lý kiểm tra giới hạn tốc độ/thời gian/góc cho khối di chuyển mới
+ok 48 - trợ lý kiểm tra giới hạn tốc độ/thời gian/góc cho khối di chuyển mới
+  ---
+  duration_ms: 0.167191
+  type: 'test'
+  ...
+# Subtest: CT expansion profile matches the documented motor and sensor GPIO map
+ok 49 - CT expansion profile matches the documented motor and sensor GPIO map
+  ---
+  duration_ms: 1.029645
+  type: 'test'
+  ...
+# Subtest: CT expansion extension is registered and active only on its profile
+ok 50 - CT expansion extension is registered and active only on its profile
+  ---
+  duration_ms: 0.483425
+  type: 'test'
+  ...
+# Subtest: default CT expansion pin configuration passes extension compatibility checks
+ok 51 - default CT expansion pin configuration passes extension compatibility checks
+  ---
+  duration_ms: 0.70052
+  type: 'test'
+  ...
+# Subtest: motor block selects TB6612 runtime without injecting it into other board profiles
+ok 52 - motor block selects TB6612 runtime without injecting it into other board profiles
+  ---
+  duration_ms: 0.814181
+  type: 'test'
+  ...
+# Subtest: manual GPIO changes that collide with a fixed extension pin are rejected
+ok 53 - manual GPIO changes that collide with a fixed extension pin are rejected
+  ---
+  duration_ms: 0.822764
+  type: 'test'
+  ...
+# Subtest: 3 mạch STM32 đăng ký vào nhóm STM32 với FQBN được phép biên dịch
+ok 54 - 3 mạch STM32 đăng ký vào nhóm STM32 với FQBN được phép biên dịch
+  ---
+  duration_ms: 0.861973
+  type: 'test'
+  ...
+# Subtest: mỗi mạch có bộ khối riêng: kiểu khối theo tiền tố mạch, tên khối ghi tên mạch
+ok 55 - mỗi mạch có bộ khối riêng: kiểu khối theo tiền tố mạch, tên khối ghi tên mạch
+  ---
+  duration_ms: 0.255463
+  type: 'test'
+  ...
+# Subtest: khối ghi đúng tên chân thật của từng mạch
+ok 56 - khối ghi đúng tên chân thật của từng mạch
+  ---
+  duration_ms: 0.389985
+  type: 'test'
+  ...
+# Subtest: sinh mã: di chuyển, LED, chân, PWM, Bluetooth
+ok 57 - sinh mã: di chuyển, LED, chân, PWM, Bluetooth
+  ---
+  duration_ms: 0.825328
+  type: 'test'
+  ...
+# Subtest: Bluetooth gửi chuỗi: thoát đúng chuẩn C++
+ok 58 - Bluetooth gửi chuỗi: thoát đúng chuẩn C++
+  ---
+  duration_ms: 0.221402
+  type: 'test'
+  ...
+# Subtest: cấu hình mặc định của 3 mạch hợp lệ và không trùng chân
+ok 59 - cấu hình mặc định của 3 mạch hợp lệ và không trùng chân
+  ---
+  duration_ms: 1.01336
+  type: 'test'
+  ...
+# Subtest: kiểm tra cấu hình: sai tên chân, chân không PWM, trùng chân, chân không có trên mạch
+ok 60 - kiểm tra cấu hình: sai tên chân, chân không PWM, trùng chân, chân không có trên mạch
+  ---
+  duration_ms: 1.058387
+  type: 'test'
+  ...
+# Subtest: sketch STM32: chân, UART Bluetooth, polarity LED theo từng mạch
+ok 61 - sketch STM32: chân, UART Bluetooth, polarity LED theo từng mạch
+  ---
+  duration_ms: 0.622153
+  type: 'test'
+  ...
+# Subtest: hàm nút nhấn chỉ có trong sketch khi khối được dùng
+ok 62 - hàm nút nhấn chỉ có trong sketch khi khối được dùng
+  ---
+  duration_ms: 0.41971
+  type: 'test'
+  ...
+# Subtest: khối Servo kéo thư viện Servo của STM32duino
+ok 63 - khối Servo kéo thư viện Servo của STM32duino
+  ---
+  duration_ms: 0.341512
+  type: 'test'
+  ...
+# Subtest: toolbox: khối GPIO/Bluetooth chung bị ẩn, khối riêng của đúng mạch hiện đủ
+ok 64 - toolbox: khối GPIO/Bluetooth chung bị ẩn, khối riêng của đúng mạch hiện đủ
+  ---
+  duration_ms: 0.590575
+  type: 'test'
+  ...
+# Subtest: extension STM32 không bật trên board khác
+ok 65 - extension STM32 không bật trên board khác
+  ---
+  duration_ms: 0.104327
+  type: 'test'
+  ...
+1..65
+# tests 65
+# suites 0
+# pass 65
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 463.129431
